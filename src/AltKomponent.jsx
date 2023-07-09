@@ -1,14 +1,12 @@
 import DerinKomponent from "./DerinKomponent"
 
-const AltKomponent = ({bilgi})=> {
+const AltKomponent = ({bilgi})=>{
 
-
-    return(
+    return (
         <>
-            <p>Ben AltKomponent mesajıyım</p>
-            <p>Üst komponentten gelen bilgi : {bilgi} </p>
-
-            <DerinKomponent bilgi={bilgi} />
+            <p>Ben alt komponent mesajıyım</p>
+            <p>Üst komponentten gelen bilgi: {bilgi}</p>
+            <DerinKomponent />
         </>
     )
 }

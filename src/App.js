@@ -1,18 +1,20 @@
 import { useState } from "react"
-import AltKomponent from "./AltKomponent"
+import AltKomponent from "./AltKomponent";
+import SayacKapsam from "./SayacKapsam";
 
-const App = ()=> {
-    const [sayac, sayacGuncelle] = useState(0)
+function App() {
+  const [sayac, sayacGuncelle] = useState(0)
 
+  return (
+    <>
+      <SayacKapsam.Provider value={sayac}>
+        <p>Ben Ana komponentim</p>
+        <button onClick={()=>{sayacGuncelle(eski=>eski+1)}}>+</button>
 
-    return (
-        <>
-            <p>Ben Ana komponent</p>
-            <button onClick={()=> {sayacGuncelle(eski=>eski+1)}}>+</button>
-        
-            <AltKomponent bilgi={sayac} />
-        </>
-    )
+        <AltKomponent bilgi={sayac} />
+      </SayacKapsam.Provider>
+    </>
+  );
 }
 
-export default App
+export default App;
