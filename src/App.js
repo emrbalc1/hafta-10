@@ -1,7 +1,7 @@
 const App = ()=> {
-    <>
-        Merhaba
-    </>
+    return (
+        
+    )
 }
 
 export default App
